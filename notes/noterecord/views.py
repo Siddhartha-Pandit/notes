@@ -1,5 +1,10 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import generics
+from .models import notedata
+from .serializers import PostSerializer
 
-def index(request):
-    return HttpResponse("This is app")
+class PostList(generics.ListCreateAPIView):
+    queryset=notedata.objects.all()
+    serializer_class=PostSerializer
+    pass
+
+

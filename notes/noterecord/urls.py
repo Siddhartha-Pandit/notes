@@ -1,8 +1,9 @@
 from django.contrib import admin
-from django.urls import path
-from . import views
+from django.urls import path,include
+from .views import PostList
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('',views.index,name='index')
+    # path('',index,name='index'),
+    path('api/',PostList.as_view(),name="create")
 ]
