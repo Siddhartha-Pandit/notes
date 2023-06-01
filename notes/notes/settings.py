@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'noterecord.apps.NoterecordConfig'
+    'noterecord.apps.NoterecordConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
