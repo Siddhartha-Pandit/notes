@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap');
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  font-size: 62.5%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.App{
+  /* display: flex;
   flex-direction: column;
+  align-items: center; */
+  font-family: 'Poppins',sans-serif;
+  /* background-color: #cafe; */
+}
+/* navigation bar */
+.navigation-outerdiv{
+  height:6.5rem;
+  font-size: 2.4rem;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.1) ;
+}
+.hover{
+  margin-left:2rem ;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.hover:hover{
+transition: 0.05s;
+width: 4rem;
+height: 4rem;
+background-color: #aaaaaa55;
+border-radius: 50%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.logo-cointainer{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2rem;
+  align-items: center;
+ 
+}
+.uil-diary-alt{
+  font-size: 4.5rem !important;
+}
+.logo{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+ 
+}
+.logo DescriptionIcon{
+  font-size:2rem ;
+}
+.profile-cointainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right:2rem;
+  
+}
+.profile-image{
+  height:3.2rem;
+  width:3.2rem;
+  border-radius: 50%;
+}
+.profile-image{
+  background:url('https://img1.ak.crunchyroll.com/i/spire4/efb689bcfd5b6f86359a902f6d21136e1644413930_full.jpg');
+  background-repeat: no-repeat;
+  background-size:100% ;
+ 
+}
+@media only screen and(max-width:1200){
+  /*large screen */
+}
+@media only screen and(max-width:992px){
+  /* laptop phone */
+}
+@media only screen and(max-width:796px){
+  /* tablet phone */
+}
+@media (max-width:600px){
+  /* mobile phone */
+  .navigation-outerdiv{
+    height:5.6rem;
   }
 }

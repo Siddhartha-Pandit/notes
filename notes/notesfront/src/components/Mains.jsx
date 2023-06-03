@@ -1,19 +1,36 @@
-import { useEffect } from "react";
-import axios from 'axios'
+import { useEffect, useState } from "react";
+import axios from 'axios';
 
 const Mains = () => {
-    useEffect(()=>{
+    const [data, setData] = useState([]);
+   
+
+    useEffect(() => {
         axios.get('http://127.0.0.1:8000/note/')
-        .then((response)=>{
-            console.log(response.data)
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
-    },[])
-    return ( 
-        <div>This is main component</div>
-     );
+            .then((response) => {
+               
+                const fetchdata = response.data;
+                setData(fetchdata);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
+
+    return (
+        <div>
+            <div>
+                <h1>Notes</h1>
+                {data.map((noteData) => (
+                    <div key={noteData.id}>
+                        <h3>{noteData.title}</h3>
+                        <p>{noteData.title}</p>
+                    </div>
+                ))}
+            </div>
+            
+        </div>
+    );
 }
- 
+
 export default Mains;
