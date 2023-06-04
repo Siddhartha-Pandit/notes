@@ -1,18 +1,22 @@
 import './App.css';
 // import Main from '../components/Mains'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Sidenav from './components/Sidenav';
 import Mains from './components/Mains';
 import Todo from './components/Todo';
-import Navbar from './components/Navbar';
-import Sidenav from './components/Sidenav';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar></Navbar>
-      <Sidenav></Sidenav>
-      <Mains></Mains>
-      <Todo></Todo>
-    </div>
+    <Router>
+
+      <div className="App">
+        <Navbar />
+        <Sidenav />
+          <Hero />
+      </div>
+    </Router>
   );
 }
 
