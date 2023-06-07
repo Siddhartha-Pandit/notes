@@ -4,49 +4,77 @@ const Navbar = () => {
 
     const [sidenavOpen, setSidenavOpen] = useState(true)
     const [isDark, setDark] = useState(false)
-    const [windowSize, setSize] = useState()
+   
   
-    function widthchange(){
-        setSize(window.outerWidth)
-        console.log("window size is",windowSize)
-    }
+   window.addEventListener("resize",()=>{
     
+    window.outerWidth <= 600 ? setSidenavOpen(false) : setSidenavOpen(true)
+   })
+
+    window.addEventListener("scroll",function(){
+        let a = document.querySelector('.navigation-outerdiv');
+        let r = document.querySelector('.side-nav');
+        a.style.setProperty('display', 'sticky')
+    })
+    useEffect(() => {
+        const getCurrentTime = () => {
+            const obj = new Date()
+            let curhrs = obj.getHours()
+
+
+            if (curhrs >= 18) {
+                setDark(true)
+
+            }
+            else {
+                setDark(false)
+
+            }
+        }
+        getCurrentTime();
+    }, [])
     useEffect(
         () => {
             const windowWidth=window.innerWidth
-            console.log("width of",windowWidth)
+            
             let r = document.querySelector('.side-nav');
             let a = document.querySelector('#sidenav-text1');
             let b = document.querySelector('#sidenav-text2');
-            let e = document.querySelector('.hero-cointainer');
+            let e = document.querySelector(".hero-cointainer");
+            let f = document.querySelector(".feature-cointainer");
+            let dark = document.querySelector(':root');
+            if(isDark){
+                dark.style.setProperty('--font-color', 'white')
+                dark.style.setProperty('--background-color', '#272822')
+                dark.style.setProperty('--shadow', 'rgba(255, 255, 255, 0.1)')
+                dark.style.setProperty('--border-color', '#656565')
+                
+            }
+            else{
+                dark.style.setProperty('--font-color', 'black')
+                dark.style.setProperty('--background-color', '#f6f6f6')
+                dark.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.1)')
+                dark.style.setProperty('--border-color', '#e0e0e0')
+            }
             if (sidenavOpen) {
-                r.style.setProperty('width', '28rem')
-                a.style.setProperty('display', 'flex')
-                b.style.setProperty('display', 'flex')
-                e.style.setProperty('left', '28rem')
+                r.style.setProperty('width', '27rem')
+                a.style.setProperty('display','flex')
+                b.style.setProperty('display','flex')
+                e.style.setProperty('left', '30rem')
+                dark.style.setProperty('--margin-left', '27rem')
                 
             }
             else {
                 r.style.setProperty('width', '8rem')
                 a.style.setProperty('display', 'none')
                 b.style.setProperty('display', 'none')
-                e.style.setProperty('left', '8rem')
+                e.style.setProperty('left', '10rem')
+                dark.style.setProperty('--margin-left', '10rem')
             }
         }
         )
-        let dark = document.querySelector(':root');
-        if(isDark){
-                dark.style.setProperty('--font-color', 'white')
-                dark.style.setProperty('--background-color', '#272822')
-                // dark.style.setProperty('--background-color', '#af856b')
-                dark.style.setProperty('--shadow', 'rgba(255, 255, 255, 0.1)')
-
-            }
-            else{
-                dark.style.setProperty('--font-color', 'black')
-                dark.style.setProperty('--background-color', '#f6f6f6')
-                dark.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.1)')
-            }
+        
+        
 
 
     return (
@@ -58,7 +86,7 @@ const Navbar = () => {
                 </div>
                 <div className=" profile-cointainer">
                     <div className="hover">
-                        <div onClick={() => setDark(!isDark)} onresize={()=>widthchange}>
+                        <div onClick={() => setDark(!isDark)}>
                            
                              {isDark ?  <i className="uil uil-bright"></i>:<i className="uil uil-brightness-half"></i>}
                    

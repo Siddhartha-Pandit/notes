@@ -12,11 +12,22 @@ function App() {
     <Router>
 
       <div className="App">
+
         <Navbar />
+
+
         <Sidenav />
-          <Hero />
+        {/* <Hero />
+           */}
+        <div className='feature-cointainer'>
+
+          <Routes>
+            <Route path="/" element={<Mains />} />
+            <Route path="/todo" element={<Todo />} />
+          </Routes>
+        </div>
       </div>
-    </Router>
+    </Router >
   );
 }
 

@@ -15,10 +15,10 @@ const Todo = () => {
     }, []);
     return ( 
         <div>
-            <div>
-                <h1>To-Do List</h1>
+            <div className="hero-cointainer todo">
+                
                 {todo.map((todoData)=>(
-                    <div key={todoData.id}>
+                    <div  className= "todo-cointainer" key={todoData.id}>
                        <h3>{todoData.todolist}</h3>
                        <p>Time: {todoData.time} status:{todoData.status}</p>
                        

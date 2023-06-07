@@ -19,10 +19,11 @@ const Mains = () => {
 
     return (
         <div>
-            <div>
-                <h1>Notes</h1>
+           
+            <div className="hero-cointainer notes">
+                
                 {data.map((noteData) => (
-                    <div key={noteData.id}>
+                    <div className="note-cointainer" key={noteData.id}>
                         <h3>{noteData.title}</h3>
                         <p>{noteData.title}</p>
                     </div>
