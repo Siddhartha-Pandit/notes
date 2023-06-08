@@ -6,6 +6,8 @@ import Sidenav from './components/Sidenav';
 import Mains from './components/Mains';
 import Todo from './components/Todo';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NoteDetail from './components/NoteDetail';
+import TodoDetail from './components/TodoDetail';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Mains />} />
             <Route path="/todo" element={<Todo />} />
+            <Route path="/note/:id" element={<NoteDetail />} />
+            <Route path="/todo/:id" element={<TodoDetail />} />
           </Routes>
         </div>
       </div>
