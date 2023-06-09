@@ -46,7 +46,7 @@ const Navbar = () => {
             if(isDark){
                 dark.style.setProperty('--font-color', 'white')
                 dark.style.setProperty('--background-color', '#272822')
-                dark.style.setProperty('--shadow', 'rgba(0,0, 0, 0.2)')
+                dark.style.setProperty('--shadow', 'rgba(0,0, 0, 0.8)')
                 dark.style.setProperty('--border-color', '#656565')
                 
             }
