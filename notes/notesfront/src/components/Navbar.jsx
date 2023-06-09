@@ -46,14 +46,14 @@ const Navbar = () => {
             if(isDark){
                 dark.style.setProperty('--font-color', 'white')
                 dark.style.setProperty('--background-color', '#272822')
-                dark.style.setProperty('--shadow', 'rgba(255, 255, 255, 0.1)')
+                dark.style.setProperty('--shadow', 'rgba(0,0, 0, 0.2)')
                 dark.style.setProperty('--border-color', '#656565')
                 
             }
             else{
                 dark.style.setProperty('--font-color', 'black')
                 dark.style.setProperty('--background-color', '#f6f6f6')
-                dark.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.1)')
+                dark.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.2)')
                 dark.style.setProperty('--border-color', '#e0e0e0')
             }
             if (sidenavOpen) {
