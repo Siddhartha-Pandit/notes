@@ -283,6 +283,9 @@ body {
   transition: 0.2s;
   
 }
+.addNote-cointainer:hover{
+  background-color:#878336;
+}
 .addTodo-cointainer{
   transform: translatey(var(--translate-todo));
   
@@ -292,10 +295,17 @@ body {
   padding-left: 17px;
   transition: 0.2s;
 }
+.addTodo-cointainer:hover{
+  background-color:#2388B0;
+}
 .plus-cointainer{
   background-color: #d7415d;
+  
   font-size: 40px;
   z-index: 50;
+}
+.plus-cointainer:hover{
+  background-color: #B3364C;
 }
 
 @media only screen and(max-width:1200) {

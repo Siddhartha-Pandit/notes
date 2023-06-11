@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 const Add = () => {
+    const [plusClick,setPlusClick]=useState(true)
     function hover(){
        
         const a=document.querySelector(":root");
@@ -16,6 +19,17 @@ const Add = () => {
         
        
     } 
+    function clickEvent(){
+        if(plusClick){
+            hover()
+            setPlusClick(false)
+        }
+        else{
+            hoverRemove()
+            setPlusClick(true)
+        }
+        
+    }
     return (
         <div>
             <div class="add-cointainer" onMouseOver={hover} onMouseOut={hoverRemove}>
@@ -25,7 +39,7 @@ const Add = () => {
                 <div className="addTodo-cointainer" onMouseOver={hover} onMouseOut={hoverRemove} >
                     <i class="uil uil-list-ul"></i>
                 </div>
-                <div className="plus-cointainer" onMouseOver={hover} onMouseOut={hoverRemove} >
+                <div className="plus-cointainer" onMouseOver={hover} onClick={clickEvent} onMouseOut={hoverRemove} >
                     <i class="uil uil-plus"></i>
                 </div>
             </div>
