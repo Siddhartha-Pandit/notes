@@ -9,6 +9,8 @@ import Add from './components/Add';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NoteDetail from './components/NoteDetail';
 import TodoDetail from './components/TodoDetail';
+import AddNotes from './components/AddNotes';
+import AddTodo from './components/AddTodo';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
             <Route path="/todo" element={<Todo />} />
             <Route path="/note/:id" element={<NoteDetail />} />
             <Route path="/todo/:id" element={<TodoDetail />} />
+            <Route path="/notes/add" element={<AddNotes />} />
+            <Route path="/todo/add" element={<AddTodo />} />
           </Routes>
           <Add></Add>
         </div>

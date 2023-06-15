@@ -6,7 +6,7 @@ const NoteDetail = () => {
     const { data }= useFetch('http://127.0.0.1:8000/note/'+id)
     
     return ( 
-        <div>
+        <div className="hero-cointainer">
           <h1>{data.title}</h1>
           <p>{data.detail}</p>
         </div>

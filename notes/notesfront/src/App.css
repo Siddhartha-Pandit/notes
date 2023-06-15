@@ -307,7 +307,20 @@ body {
 .plus-cointainer:hover{
   background-color: #B3364C;
 }
+.addNotes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  width: 100%;
+  height: 100%;
 
+}
+.addNotes-cointainer{
+  width: 100px;
+  height: 100px;
+  background-color: #2BA5D6;
+}
 @media only screen and(max-width:1200) {
   /*large screen */
 }
