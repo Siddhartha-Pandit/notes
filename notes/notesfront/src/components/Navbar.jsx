@@ -82,7 +82,7 @@ const Navbar = () => {
             <nav className="navigation-outerdiv">
                 <div className="logo-cointainer">
                     <div><i className=" hover uil uil-bars" onClick={() => setSidenavOpen(!sidenavOpen)}></i></div>
-                    <div className='logo'><i className="uil uil-diary-alt"></i><p>Notes</p></div>
+                    <div className='logo'><i class="fa-solid fa-notebook"></i> <p>Notes</p></div>
                 </div>
                 <div className=" profile-cointainer">
                     <div className="hover">
