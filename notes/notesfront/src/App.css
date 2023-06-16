@@ -8,7 +8,8 @@
   --margin-left: 28rem;
   --translate-todo: 56px;
   --translate-notes: 112px;
-
+  --set-remainder:#BFBFBF;
+  /* --set-remainder:#4B4D41; */
 
 }
 
@@ -158,7 +159,7 @@ body {
 .note-cointainer {
 
   width: 23rem;
-  height: 19rem;
+  height: 23rem;
 }
 
 .todo-cointainer {
@@ -324,6 +325,10 @@ body {
   height: 100%;
 
 }
+.notes-content{
+  width: 100%;
+  
+}
 
 .addNotes-cointainer {
   display: flex;
@@ -337,7 +342,7 @@ body {
 .title {
   display: flex;
   /* width: 800px; */
-  width: 100%;
+ 
   height: 44px;
   font-size: 2.5rem;
   font-weight: 500;
@@ -351,7 +356,10 @@ body {
   /* 
   */
 }
-
+.note-content{
+ 
+  height: 88%;
+}
 .content {
   display: flex;
   letter-spacing: 0.0228rem;
@@ -371,9 +379,19 @@ body {
 .bottom-bar{
   display: flex;
   align-items: center;
-  justify-content: end;
+  position: relative;
+ 
+  bottom: 0;
+
+ 
   
   height: 35px;
+}
+.bottom{
+  justify-content: end;
+}
+.bottom-todo{
+  justify-content: space-between;
 }
 .bottom-bar i{
   display: flex;
@@ -394,6 +412,24 @@ body {
   color: #f6f6f6;
 border-radius: 5px;
 }
+.set-date{
+  margin-left:8px ;
+  display: flex;
+  font-size: 15px;
+
+  height: 30px;
+ 
+  padding: 5px;
+  border-radius: 4px;
+  align-items: center;
+  background-color:var( --set-remainder);
+}
+.remainder-textcointainer{
+  font-family: 'Poppins', sans-serif;
+  margin-left:3px ;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
 .bottom-bar button:hover{
   background-color: #725CED;
 }
@@ -401,7 +437,30 @@ border-radius: 5px;
   background-color: #d7415d;
   color: #f6f6f6;
 }
+.todo{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+}
+.checkbox{
+  width: 20px;
+  height: 20px;
+ 
+}
+.abc{
+  background-color: var(--set-remainder);
+  border: none;
+  outline: none;
+  color: var(--font-color);
+}
+.addtodo-cointainer{
 
+  margin-left:5px ;
+  width:96.6%;
+ 
+}
 @media only screen and(max-width:1200) {
   /*large screen */
 }
@@ -446,5 +505,9 @@ border-radius: 5px;
   .hero-cointainer {
     margin-top: 0.1rem;
     padding: 0.1rem;
+  }
+  .note-content{
+   
+    height: 84%;
   }
 }

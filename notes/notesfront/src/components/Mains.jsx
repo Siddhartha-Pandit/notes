@@ -5,7 +5,7 @@ import useFetch from "./useFetch";
 const Mains = () => {
 
 
-    const { data }= useFetch('http://127.0.0.1:8000/note/')
+    const { data } = useFetch('http://127.0.0.1:8000/note/')
 
     return (
         <div>
@@ -16,10 +16,11 @@ const Mains = () => {
                     <div key={noteData.id}>
                         <Link to={`/note/${noteData.id}`} style={{ textDecoration: 'none' }} >
                             <div className="note-cointainer">
-
-                                <h3 >{noteData.title}</h3>
-                                <p>{noteData.title}</p>
-
+                                <div className="note-content">
+                                    <h3 >{noteData.title}</h3>
+                                    <p>{noteData.title}</p>
+                                </div>
+                                <div className="bottom-bar bottom"><i class="uil uil-trash"></i> </div>
                             </div>
                         </Link>
                     </div>

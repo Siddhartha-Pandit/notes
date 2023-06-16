@@ -48,6 +48,7 @@ const Navbar = () => {
                 dark.style.setProperty('--background-color', '#272822')
                 dark.style.setProperty('--shadow', 'rgba(0,0, 0, 0.8)')
                 dark.style.setProperty('--border-color', '#656565')
+                dark.style.setProperty('--set-remainder', '#4B4D41')
                 
             }
             else{
@@ -55,6 +56,7 @@ const Navbar = () => {
                 dark.style.setProperty('--background-color', '#f6f6f6')
                 dark.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.2)')
                 dark.style.setProperty('--border-color', '#e0e0e0')
+                dark.style.setProperty('--set-remainder', '#BFBFBF')
             }
             if (sidenavOpen) {
                 r.style.setProperty('width', '27rem')
