@@ -42,6 +42,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 6.5rem;
+  margin-right: 0px;
   margin-left: var(--margin-left);
 }
 
@@ -164,6 +165,8 @@ body {
 
 .todo-cointainer {
   width: 100%;
+ 
+ 
   height: 10rem;
 }
 
@@ -179,6 +182,9 @@ body {
   flex-direction: column;
 
   width: calc(100vw - var(--margin-left));
+  
+  
+ 
 
 }
 
@@ -437,12 +443,12 @@ border-radius: 5px;
   background-color: #d7415d;
   color: #f6f6f6;
 }
-.todo{
+.todo-todo{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  flex-direction: row;
+ 
 }
 .checkbox{
   width: 20px;

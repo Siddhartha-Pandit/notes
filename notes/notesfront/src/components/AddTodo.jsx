@@ -3,7 +3,7 @@ const AddTodo = () => {
         <div className="hero-cointainer addNotes">
             <div className="addNotes-cointainer ">
                 <form >
-                    <div className="todo">
+                    <div className="todo-todo">
                         <input className="checkbox" type="checkbox"></input>
                         <input className="title addtodo-cointainer" placeholder="Add your ToDo" type="text"></input>
                     </div>
