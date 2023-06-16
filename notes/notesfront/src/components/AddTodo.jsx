@@ -12,11 +12,9 @@ const AddTodo = () => {
                 <div className="bottom-bar bottom-todo">
                     <div className="set-date">
                         <form >
-                            <input className="checkbox abc" type="datetime-local"></input>
+                            <input className="checkbox abc dates" type="datetime-local"></input>
                         </form >
-                        <div className="remainder-textcointainer">
-                            Set Remiander
-                        </div>
+                       
                     </div>
 
                     <button>Done</button>

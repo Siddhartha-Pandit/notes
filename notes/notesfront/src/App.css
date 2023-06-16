@@ -455,6 +455,9 @@ border-radius: 5px;
   height: 20px;
  
 }
+.dates{
+  width: 170px;
+}
 .abc{
   background-color: var(--set-remainder);
   border: none;
@@ -475,8 +478,11 @@ border-radius: 5px;
   /* laptop phone */
 }
 
-@media only screen and(max-width:796px) {
+@media only screen and (max-width:796px) {
   /* tablet phone */
+  .addNotes-cointainer{
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width:600px) {
@@ -515,5 +521,8 @@ border-radius: 5px;
   .note-content{
    
     height: 84%;
+  }
+  .addNotes-cointainer{
+    width: 100%;
   }
 }

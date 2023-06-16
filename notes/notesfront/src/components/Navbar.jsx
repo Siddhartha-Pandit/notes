@@ -8,7 +8,7 @@ const Navbar = () => {
   
    window.addEventListener("resize",()=>{
     
-    window.outerWidth <= 600 ? setSidenavOpen(false) : setSidenavOpen(true)
+    window.outerWidth <= 800 ? setSidenavOpen(false) : setSidenavOpen(true)
    })
 
     window.addEventListener("scroll",function(){
